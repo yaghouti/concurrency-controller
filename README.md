@@ -27,6 +27,16 @@ for (let i = 0; i < 1000; i++) {
 // You can change concurrency limit during execution
 myConcurrentList.setConcurrencyLimit(3);
 
+// You can get result via callback
+myConcurrentList.add(sampleAsyncFunc, 'arg1', 'arg2', function (error, result) {
+  if (error) {
+    console.log('Error > ', error);
+  }
+  else {
+    console.log('Success > ', result);
+  }
+});
+
 // You can get result of all function calls when all of them executed
 // By callback:
 myConcurrentList.finish(function (functionsResult) {
