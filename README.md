@@ -15,7 +15,7 @@ let myConcurrentList = new Concurrentize(concurrencyLimit);
 
 // Put several functions and corresponding arguments into myConcurrentList
 for (let i = 0; i < 1000; i++) {
-  myConcurrentList.add(sampleAsyncFunc, i)
+  myConcurrentList.add(sampleAsyncFunc, i, 'arg2')
     .then(function (result) {
       console.log('Success > ', result);
     })
@@ -54,7 +54,7 @@ myConcurrentList.finish()
     });
 });
 
-function sampleAsyncFunc(i) {
+function sampleAsyncFunc(arg1, arg2) {
   return new Promise((resolve, reject)=> {
     // your code
   });
