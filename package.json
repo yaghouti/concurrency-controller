@@ -3,14 +3,22 @@
   "version": "0.0.1",
   "description": "Runs functions concurrently with a degree of concurrency",
   "main": "index.js",
-  "scripts": {
-    "test": "npm test"
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaghouti/biginterval"
   },
   "keywords": [
     "task",
     "concurrent",
     "concurrency"
   ],
-  "author": "Majid Yaghouti",
+  "author": {
+    "name": "Majid Yaghouti",
+    "email": "m.yaghouti@yahoo.com"
+  },
   "license": "MIT"
 }
