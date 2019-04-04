@@ -1,0 +1,2 @@
+# concurrentize
+Runs functions concurrently
