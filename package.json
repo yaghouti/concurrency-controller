@@ -1,7 +1,7 @@
 {
   "name": "concurrentize",
   "version": "0.0.1",
-  "description": "Runs functions concurrently with a degree of concurrency",
+  "description": "Invokes functions concurrently with a given degree of concurrency",
   "main": "index.js",
   "engines": {
     "node": ">=4.3.2"
