@@ -4,12 +4,10 @@ Invokes functions concurrently with a degree of concurrency.
 It puts given functions in a queue and keeps a specific number of them (concurrencyLimit) running simultaneously. By the time a function's execution gets done (resolves or rejects), another function from the queue is invoked.
 
 
-# To install:
-```
-npm install concurrentize
-```
+**To install:**
+> npm install concurrentize
 
-# Usage:
+**Usage:**
 ```javascript
 let Concurrentize = require('concurrentize');
 let concurrencyLimit = 2;
