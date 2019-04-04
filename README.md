@@ -1,7 +1,7 @@
 # Concurrentize
-Runs functions concurrently with a degree of concurrency.
+Invokes functions concurrently with a degree of concurrency.
 
-It puts your functions in a queue and keeps a specific number of them (concurrencyLimit) running at any period of time.
+It puts given functions in a queue and keeps a specific number of them (concurrencyLimit) running simultaneously. By the time a function's execution gets done (resolves or rejects), another function from the queue is invoked.
 
 
 # To install:
