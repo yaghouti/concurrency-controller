@@ -9,10 +9,11 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/yaghouti/biginterval"
+    "url": "https://github.com/yaghouti/concurrentize"
   },
   "keywords": [
     "task",
+    "run",
     "concurrent",
     "concurrency"
   ],
