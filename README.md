@@ -1,7 +1,7 @@
 # Concurrentize
 Runs functions concurrently with a degree of concurrency.
 
-It puts your functions in a queue and keeps a specific number of them (concurrencyLimit) running at any period of time
+It puts your functions in a queue and keeps a specific number of them (concurrencyLimit) running at any period of time.
 
 
 # How to install
@@ -30,18 +30,19 @@ for (let i = 0; i < 1000; i++) {
 myConcurrentList.setConcurrencyLimit(3);
 
 // You can get result of all function calls when all of them executed
-// By callback
+// By callback:
 myConcurrentList.finish(function (functionsResult) {
   functionsResult.forEach(function (functionResult) {
-    console.log('Error:', functionResult.error, '- Result:', functionResult.result); // Error: false - Result: 'some result'
+    console.log('Error:', functionResult.error, '- Result:', functionResult.result);
+    // Error: false - Result: 'some result'
   });
 });
-
-// Or by promise
+// Or by promise:
 myConcurrentList.finish()
 .then(function (functionsResult) {
   functionsResult.forEach(function (functionResult) {
-      console.log('Error:', functionResult.error, '- Result:', functionResult.result); // Error: false - Result: 'some result'
+      console.log('Error:', functionResult.error, '- Result:', functionResult.result);
+      // Error: false - Result: 'some result'
     });
 });
 
