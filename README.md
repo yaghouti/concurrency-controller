@@ -1,21 +1,21 @@
-# Concurrentize
+# Concurrency Controller
 Invokes functions concurrently with a given degree of concurrency.
 
-It puts given functions in a queue and keeps a specific number of them (concurrencyLimit) running simultaneously. By the time a function's execution gets done (resolves or rejects), another function from the queue is invoked.
+It puts given functions in a queue and keeps a specific number of them (concurrencyLimit) running simultaneously. By the time a function's execution gets done (resolves/rejects), another function from the queue is invoked.
 
 
 **To install:**
-> npm install concurrentize
+> npm install concurrency-controller
 
 **Usage:**
 ```javascript
-let Concurrentize = require('concurrentize');
+let ConcurrencyController = require('concurrency-controller');
 let concurrencyLimit = 2;
-let myConcurrentList = new Concurrentize(concurrencyLimit);
+let myConcurrentList = new ConcurrencyController(concurrencyLimit);
 
 // Put several functions and corresponding arguments into myConcurrentList
 for (let i = 0; i < 1000; i++) {
-  myConcurrentList.add(sampleAsyncFunc, i, 'arg2')
+  myConcurrentList.add(sampleFunc, i, 'arg2')
     .then(function (result) {
       console.log('Success > ', result);
     })
@@ -28,7 +28,7 @@ for (let i = 0; i < 1000; i++) {
 myConcurrentList.setConcurrencyLimit(3);
 
 // You can get result via callback
-myConcurrentList.add(sampleAsyncFunc, 'arg1', 'arg2', function (error, result) {
+myConcurrentList.add(sampleFunc, 'arg1', 'arg2', function (error, result) {
   if (error) {
     console.log('Error > ', error);
   }
@@ -54,7 +54,7 @@ myConcurrentList.finish()
     });
 });
 
-function sampleAsyncFunc(arg1, arg2) {
+function sampleFunc(arg1, arg2) {
   return new Promise((resolve, reject)=> {
     // your code
   });

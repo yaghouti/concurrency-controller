@@ -1,5 +1,5 @@
 {
-  "name": "concurrentize",
+  "name": "concurrency-controller",
   "version": "0.0.1",
   "description": "Invokes functions concurrently with a given degree of concurrency",
   "main": "index.js",
@@ -9,13 +9,17 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/yaghouti/concurrentize"
+    "url": "https://github.com/yaghouti/concurrency-controller"
   },
   "keywords": [
     "task",
     "run",
     "concurrent",
-    "concurrency"
+    "concurrently",
+    "concurrency",
+    "simultaneous",
+    "simultaneously",
+    "concurrency control"
   ],
   "author": {
     "name": "Majid Yaghouti",
